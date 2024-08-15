@@ -1,0 +1,187 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background: #292a2d;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .animated-title {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+header .animated-title .welcome {
+    color: #f69559;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start hidden */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Navigation Menu Styling */
+nav {
+    background-color: #26292e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-weight: 400;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #7a9eba;
+}
+
+/* Main Content Styling */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+main p{
+    font-size: 1.1em;
+    line-height: 1.6; 
+    margin: 15px 0; 
+    color: #333; 
+    text-align: left;
+    font-family: "Hind Siliguri", sans-serif;;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #292a2d;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer span {
+    font-weight: bold;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+footer p:last-child {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+
+/* Container Styling */
+.container {
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Weather Styling */
+.weather {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden until data is fetched */
+}
+
+.weather-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.temp {
+    font-size: 2em;
+    margin: 0;
+}
+
+#description {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Error Styling */
+.error {
+    display: none; /* Initially hidden */
+    color: red;
+    margin-top: 20px;
+}
